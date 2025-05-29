@@ -1,0 +1,6 @@
+Set up the core application structure for price predictions
+
+Initializes Flask app with model loading, prediction route, and UI.
+
+Replit-Commit-Author: Agent
+Replit-Commit-Session-Id: 04c517b4-acce-47e1-ab4c-93350f694caa

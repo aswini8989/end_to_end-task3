@@ -1,0 +1,164 @@
+/* Custom styles for ML Price Prediction App */
+
+:root {
+    --gradient-primary: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-info) 100%);
+    --shadow-soft: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --border-radius-lg: 0.75rem;
+}
+
+/* Body and general layout */
+body {
+    background: var(--bs-body-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card enhancements */
+.card {
+    border-radius: var(--border-radius-lg);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 0.5rem;
+    border: 1px solid var(--bs-border-color);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Button enhancements */
+.btn {
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+/* Alert styling */
+.alert {
+    border-radius: 0.75rem;
+    border: none;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, var(--bs-success) 0%, rgba(var(--bs-success-rgb), 0.8) 100%);
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, var(--bs-danger) 0%, rgba(var(--bs-danger-rgb), 0.8) 100%);
+}
+
+/* Typography */
+.display-4 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.lead {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Icon styling */
+.fas, .far {
+    opacity: 0.8;
+}
+
+/* Card header styling */
+.card-header {
+    background: rgba(var(--bs-primary-rgb), 0.05) !important;
+}
+
+/* Footer styling */
+footer {
+    border-top: 1px solid var(--bs-border-color);
+    margin-top: 3rem;
+}
+
+/* Loading animation for form submission */
+.btn[type="submit"]:disabled {
+    position: relative;
+}
+
+.btn[type="submit"]:disabled::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border: 2px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Input group styling */
+.input-group-text {
+    background: rgba(var(--bs-primary-rgb), 0.1);
+    border-color: var(--bs-border-color);
+}
+
+/* Hover effects for interactive elements */
+.card-header:hover {
+    background: rgba(var(--bs-primary-rgb), 0.1) !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Success state styling */
+.prediction-success {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
